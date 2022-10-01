@@ -1,0 +1,16 @@
+﻿<h1>Events</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    @foreach (KeyValuePair<string, string> funEvent in ViewBag.events)
+    {
+        <tr>
+            <td>@funEvent.Key</td>
+            <td>@funEvent.Value</td>
+        </tr>
+    }
+</table>
+<a asp-controller="Events" asp-action="Add">Add Event</a>
+    
