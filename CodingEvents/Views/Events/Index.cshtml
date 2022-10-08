@@ -4,11 +4,12 @@
         <th>Name</th>
         <th>Description</th>
     </tr>
-    @foreach (KeyValuePair<string, string> funEvent in ViewBag.events)
+    @foreach (Event funEvent in ViewBag.events)
     {
         <tr>
-            <td>@funEvent.Key</td>
-            <td>@funEvent.Value</td>
+            <td>@funEvent.Name</td>
+            <td>@funEvent.Description</td>
+            <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@funEvent.Id">Edit Event</a></td>
         </tr>
     }
 </table>
